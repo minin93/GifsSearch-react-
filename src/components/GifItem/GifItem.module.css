@@ -1,0 +1,12 @@
+.item {
+	box-shadow: 2px 2px 4px 0 #999;
+	box-sizing: border-box;
+	display: inline-block;
+	margin: 0 0 1.5em;
+	padding: 1em;
+	width: 100%;
+}
+
+img {
+	width: 100%;
+}
