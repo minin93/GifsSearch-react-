@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+src/services/menu-api.js
+src/services/api.js
+server/backup.json
+server/db.json
+src/logo.svg
+src/logo.svg

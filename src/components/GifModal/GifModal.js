@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import s from './GifModal.module.css';
 
 const GifModal = ({ modalIsOpen, onRequestClose, selectedGif }) => {
+	console.log(selectedGif);
 	return (
 		<Modal
 			isOpen={modalIsOpen}
