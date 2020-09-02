@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ContainerApp from './components/ContainerApp';
 import { Provider } from 'react-redux';
-import configureStore from './store/configureStore';
+import { configureStore } from './store/configureStore';
 import * as serviceWorker from './serviceWorker';
 
 import './index.css';
@@ -10,11 +10,11 @@ import './index.css';
 const store = configureStore();
 
 ReactDOM.render(
-	<Provider store={store}>
-		<React.StrictMode>
+	<React.StrictMode>
+		<Provider store={store}>
 			<ContainerApp />
-		</React.StrictMode>
-	</Provider>,
+		</Provider>
+	</React.StrictMode>,
 	document.getElementById('root')
 );
 
