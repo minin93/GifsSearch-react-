@@ -1,13 +1,13 @@
 import { createStore, applyMiddleware } from 'redux';
 import { routerMiddleware } from 'connected-react-router';
+import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import ReduxPromise from 'redux-promise';
 import { createBrowserHistory } from 'history';
 import rootReducer from './reducers';
 
 export const history = createBrowserHistory();
 // routerMiddleware(history), in middleware
-const middleware = [ReduxPromise, routerMiddleware(history)];
+const middleware = [thunk, routerMiddleware(history)];
 
 const composedEnhancers = composeWithDevTools(applyMiddleware(...middleware));
 

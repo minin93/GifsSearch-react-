@@ -10,7 +10,8 @@
 		"connected-react-router": "^6.8.0",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
-		"react-scripts": "3.4.3"
+		"react-scripts": "3.4.3",
+		"redux-thunk": "^2.3.0"
 	},
 	"scripts": {
 		"start": "react-scripts start",
@@ -35,6 +36,7 @@
 		]
 	},
 	"devDependencies": {
+		"firebase": "^7.19.1",
 		"json-server": "^0.16.1",
 		"react-modal": "^3.11.2",
 		"react-redux": "^7.2.1",
