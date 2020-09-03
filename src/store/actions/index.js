@@ -3,6 +3,8 @@ import axios from 'axios';
 export const OPEN_MODAL = 'OPEN_MODAL';
 export const CLOSE_MODAL = 'CLOSE_MODAL';
 export const REQUEST_GIFS = 'REQUEST_GIFS';
+export const SIGN_IN_USER = 'SIGN_IN_USER';
+export const SIGN_OUT_USER = 'SIGN_OUT_USER';
 
 const API_URL = 'https://api.giphy.com/v1/gifs/search?q=';
 const API_KEY = 'G47kFYNH26cXaA8DaRtxqwKZXnqYu4tY';
@@ -29,7 +31,15 @@ export function closeModal() {
 		type: CLOSE_MODAL,
 	};
 }
-// const getAllGifs = (term) =>
-// 	axios
-// 		.get(`${API_URL}${term.replace(/\s/g, '+')}&api_key=${API_KEY}`)
-// 		.then((response) => response.data);
+
+export function signInUser() {
+	return {
+		type: SIGN_IN_USER,
+	};
+}
+
+export function signOutUser() {
+	return {
+		type: SIGN_OUT_USER,
+	};
+}
