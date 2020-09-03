@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 // import GifsTemp from '../components/GifList/GifsTemp';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -9,7 +9,7 @@ import GifModal from '../components/GifModal/GifModal';
 
 import s from './App.module.css';
 
-class ContainerApp extends React.Component {
+class ContainerApp extends Component {
 	render() {
 		const {
 			actions: { requestGifs, openModal, closeModal },

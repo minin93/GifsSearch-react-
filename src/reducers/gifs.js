@@ -9,7 +9,7 @@ export default function gifs(state = initialState, action) {
 		case REQUEST_GIFS:
 			return {
 				...state,
-				data: action.payload.data.data,
+				data: action.payload.data,
 			};
 		default:
 			return state;

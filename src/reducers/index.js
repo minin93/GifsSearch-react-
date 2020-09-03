@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
+// import { connectRouter } from 'connected-react-router';
+// import { routerReducer } from 'react-router-redux';
+
 import GifsReducer from './gifs';
 import ModalReducer from './modal';
 
-const rootReducer = combineReducers({
+export default combineReducers({
 	gifs: GifsReducer,
 	modal: ModalReducer,
 });
-
-export default rootReducer;
+// router: connectRouter(history),
