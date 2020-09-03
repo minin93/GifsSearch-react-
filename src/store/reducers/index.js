@@ -1,12 +1,13 @@
 import { combineReducers } from 'redux';
 import { connectRouter } from 'connected-react-router';
-// import { routerReducer } from 'react-router-redux';
+import { reducer as FormReducer } from 'redux-form';
 
 import GifsReducer from './gifs';
 import ModalReducer from './modal';
 
 const rootReducer = (history) =>
 	combineReducers({
+		form: FormReducer,
 		router: connectRouter(history),
 		gifs: GifsReducer,
 		modal: ModalReducer,

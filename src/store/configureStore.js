@@ -3,7 +3,7 @@ import { routerMiddleware } from 'connected-react-router';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import ReduxPromise from 'redux-promise';
 import { createBrowserHistory } from 'history';
-import rootReducer from '../reducers';
+import rootReducer from './reducers';
 
 export const history = createBrowserHistory();
 // routerMiddleware(history), in middleware

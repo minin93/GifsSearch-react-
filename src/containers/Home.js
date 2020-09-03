@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as Actions from '../actions';
+import * as Actions from '../store/actions';
 import SearchBar from '../components/SearchBar/SearchBar';
 import GifList from '../components/GifList/GifList';
 import GifModal from '../components/GifModal/GifModal';
