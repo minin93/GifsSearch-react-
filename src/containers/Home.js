@@ -11,10 +11,17 @@ import s from './Home.module.css';
 class Home extends Component {
 	render() {
 		const {
-			actions: { requestGifs, openModal, closeModal },
+			actions: {
+				requestGifs,
+				openModal,
+				closeModal,
+				favoriteGif,
+				unfavoriteGif,
+			},
 			gifs,
 			modalIsOpen,
 			selectedGif,
+			authenticated,
 		} = this.props;
 		return (
 			<div className={s.container}>
@@ -22,6 +29,9 @@ class Home extends Component {
 				<GifList
 					gifs={gifs}
 					onGifSelect={(selectedGif) => openModal({ selectedGif })}
+					onFavoriteSelect={(selectedGif) => favoriteGif({ selectedGif })}
+					onFavoriteDeselect={(selectedGif) => unfavoriteGif({ selectedGif })}
+					isAuthenticated={authenticated}
 				/>
 				{selectedGif !== null && (
 					<GifModal
@@ -37,10 +47,12 @@ class Home extends Component {
 
 function mapStateToProps(state) {
 	const {
+		auth: { authenticated },
 		gifs: { data },
 		modal: { modalIsOpen, selectedGif },
 	} = state;
 	return {
+		authenticated: authenticated,
 		gifs: data,
 		modalIsOpen: modalIsOpen,
 		selectedGif: selectedGif,

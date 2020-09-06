@@ -4,6 +4,7 @@ import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { createBrowserHistory } from 'history';
 import rootReducer from './reducers';
+import * as Actions from './actions';
 
 export const history = createBrowserHistory();
 // routerMiddleware(history), in middleware
@@ -17,5 +18,8 @@ export function configureStore(initialState) {
 		initialState,
 		composedEnhancers
 	);
+
+	store.dispatch(Actions.verifyAuth());
+
 	return store;
 }
